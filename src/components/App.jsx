@@ -3,10 +3,10 @@ import { Layout } from './Layout';
 import { lazy } from 'react';
 
 const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
+const MoviesPage = lazy(() => import("../pages/MoviesPage/MoviesPage"));
 const MovieDetailsPage = lazy(() => import("../pages/MovieDetailsPage/MovieDetailsPage"));
 const Cast = lazy(() => import("../pages/Cast/Cast"));
 const Reviews = lazy(() => import("../pages/Reviews/Reviews"));
-const MoviesPage = lazy(() => import("../pages/MoviesPage/MoviesPage"));
 const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
 
 export const App = () => {
