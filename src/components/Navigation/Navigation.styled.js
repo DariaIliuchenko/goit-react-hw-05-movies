@@ -17,6 +17,6 @@ export const Title = styled.ul`
   list-style: none;
   border-bottom: 1px solid #ececec;
   margin-bottom: 30px;
-  margin-top: 10px;
+  margin-top: 20px;
   padding-bottom: 20px;
 `;
