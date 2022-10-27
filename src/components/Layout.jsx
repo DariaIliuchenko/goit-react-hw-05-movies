@@ -7,7 +7,8 @@ export const Layout = () => {
   return (
     <div>
       <Navigation />
-      <Suspense
+      <main>
+        <Suspense
         fallback={
           <div>
             <Loader />
@@ -16,6 +17,7 @@ export const Layout = () => {
       >
         <Outlet />
       </Suspense>
+      </main>
     </div>
   );
 };

@@ -1,6 +1,11 @@
-import { Link, Outlet, useSearchParams, useLocation } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { Input, Button, Form, List, Item, ItemLink, Title} from "./MoviesPage.styled"
 import { fetchSearchMovieByWord } from '../../servises/api';
+import Container from 'components/Container/Container';
+import Section from 'components/Section/Section';
+import { BsSearch } from 'react-icons/bs';
+import { IMAGE_URL } from '../../servises/api';
 
 const MoviesPage = () => {
   const [searchMovie, setSearchMovie] = useState([]);
@@ -22,21 +27,31 @@ const MoviesPage = () => {
   }, [querySearch]);
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="movieName" />
-        <button type="submit">Search</button>
-      </form>
-      <ul>
-        {searchMovie &&
-          searchMovie.map(({ title, id }) => (
-            <li key={id}>
-              <Link to={`/movies/${id}`} state={{from: location}}>{title}</Link>
-            </li>
-          ))}
-      </ul>
-      <Outlet />
-    </>
+    <Section>
+      <Container>
+        <Form onSubmit={handleSubmit}>
+          <Input type="text"
+            name="query"
+            placeholder="Search movie"
+            autoComplete="off" />
+          <Button type="submit"><BsSearch size="24" color="red" /></Button>
+        </Form>
+        <List>
+          {searchMovie &&
+            searchMovie.map(({ id, title, poster_path }) => (
+              
+              <Item key={id}>
+                <ItemLink to={`/movies/${id}`} state={{ from: location }}>
+                  {poster_path && (
+                      <img src={IMAGE_URL + 'w200' + poster_path} alt={title} />
+                    )}
+                    <Title>{title}</Title>
+                </ItemLink>
+              </Item>
+            ))}
+        </List>
+      </Container>
+    </Section>
   );
 };
-export default MoviesPage
+export default MoviesPage;

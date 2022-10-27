@@ -12,11 +12,11 @@ font-weight: 500;
 }
 `
 
-export const Title = styled.ul`
+export const List = styled.ul`
   display: flex;
   list-style: none;
-  border-bottom: 1px solid #ececec;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  background: rgb(255,245,246);
+  margin: 0;
+  padding-top: 20px;
   padding-bottom: 20px;
 `;

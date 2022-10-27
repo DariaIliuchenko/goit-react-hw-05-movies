@@ -1,19 +1,19 @@
 import React from 'react';
-import { Vortex } from 'react-loader-spinner';
-
+import { ThreeDots } from 'react-loader-spinner';
 
 export const Loader = () => {
   return (
-    <div >
-      <Vortex
-        visible={true}
+    <div>
+      <ThreeDots
         height="80"
         width="80"
-        ariaLabel="vortex-loading"
+        radius="9"
+        color="red"
+        ariaLabel="three-dots-loading"
         wrapperStyle={{}}
-        wrapperClass="vortex-wrapper"
-        colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
+        wrapperClassName=""
+        visible={true}
       />
     </div>
   );
-}
+};

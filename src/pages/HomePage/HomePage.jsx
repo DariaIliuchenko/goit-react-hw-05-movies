@@ -1,29 +1,38 @@
 import { useState, useEffect } from 'react';
 import { fetchGetTrendMovies } from '../../servises/api';
-import { Link, Outlet, useLocation } from 'react-router-dom';
-
+import { useLocation } from 'react-router-dom';
+import { Item, List, Title, ItemLink } from './HomePage.styled';
+import { IMAGE_URL } from '../../servises/api';
+import Container from 'components/Container/Container';
+import Section from 'components/Section/Section';
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
     fetchGetTrendMovies().then(({ results }) => setMovies(results));
   }, []);
-    
 
-
-    return (
+  return (
+    <Section>
+      <Container title="Trending today">
       
-    <>
-    <h1>Trending today</h1>
-    <ul>
-      {movies.map(({ title, id}) => <li key={id}>
-          <Link to={`movies/${id}`} state={{from: location}}>{title}</Link>
-        </li>)}
-    </ul>
-    <Outlet/>
-    </>
+      <List>
+        {movies.map(({ title, id, poster_path }) => (
+          <Item key={id}>
+            <ItemLink to={`movies/${id}`} state={{ from: location }}>
+              {poster_path && (
+                <img src={IMAGE_URL + 'w200' + poster_path} alt={title} />
+              )}
+              <Title>{title}</Title>
+            </ItemLink>
+          </Item>
+        ))}
+      </List>
+      
+    </Container>
+    </Section>
   );
 };
 
-export default HomePage
+export default HomePage;
