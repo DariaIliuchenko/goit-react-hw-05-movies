@@ -4,9 +4,9 @@ import styled from "styled-components";
 export const StyledNavLink = styled(NavLink)`
 text-decoration: none;
 padding: 12px;
-color: #000000;
+color: #fff;
 font-weight: 500;
-
+font-size: 25px;
 &.active {
     color: red;
 }
@@ -15,8 +15,10 @@ font-weight: 500;
 export const List = styled.ul`
   display: flex;
   list-style: none;
-  background: rgb(255,245,246);
+  /* background: rgb(255,245,246); */
   margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
+  border-bottom: 1px solid #E0E0E0;
 `;
+

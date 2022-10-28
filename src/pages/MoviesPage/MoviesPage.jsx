@@ -12,6 +12,7 @@ const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const querySearch = searchParams.get('search');
   const location = useLocation();
+  
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -22,7 +23,7 @@ const MoviesPage = () => {
   };
 
   useEffect(() => {
-    if (!querySearch) return;
+    if (!querySearch) return ;
     fetchSearchMovieByWord(querySearch).then(setSearchMovie);
   }, [querySearch]);
 

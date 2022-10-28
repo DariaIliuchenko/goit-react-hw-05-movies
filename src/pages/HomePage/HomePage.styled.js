@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom';
 export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 18px;
   list-style: none;
   padding-left:0;
+  /* padding-top: 20px; */
   justify-content: center;
+  /* background: rgb(255, 245, 246); */
+  /* background: linear-gradient(
+    180deg,
+    rgba(255, 245, 246, 1) 0%,
+    rgba(32, 51, 54, 1) 19%
+  ); */
+  background: rgba(32,51,54,1);
+/* background: radial-gradient(circle, rgba(255,245,246,1) 23%, rgba(32,51,54,1) 82%); */
 `;
 
 export const Title = styled.h3`
@@ -27,7 +36,7 @@ export const ItemLink = styled(Link)`
 
 export const Item = styled.li`
   display: flex;
-  width: 200px;
+  width: 300px;
   text-align: center;
   border: 1px solid #000;
   border-radius: 0px 0px 4px 4px;

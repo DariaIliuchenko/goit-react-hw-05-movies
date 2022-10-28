@@ -4,32 +4,37 @@ export const Input = styled.input`
   height: 40px;
   width: 350px;
   outline: none;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   border-radius: 4px;
   padding-left: 50px;
   background: transparent;
-  
+  height: 50px;
+  color: #fff;
 
   font-size: 16px;
 `;
 
 export const Button = styled.button`
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 438px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   border: none;
-  border-right: 1px solid #000;
+  border-right: 1px solid #fff;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #203336;
+  background: #fff;
+  height: 52px;
   
 `;
 export const Form = styled.form`
   position: relative;
   justify-content: center;
   display: flex;
+  
   
   
   
@@ -43,6 +48,7 @@ export const List = styled.ul`
   padding-left:0;
   justify-content: center;
   margin-top: 80px;
+  background: rgba(32,51,54,1);
   
 `;
 
