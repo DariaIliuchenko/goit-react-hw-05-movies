@@ -36,19 +36,22 @@ const ParticlesComponent = (props) => {
         },
       },
       particles: {
+        number: {
+          value: 100,
+        },
         links: {
           enable: true, 
           distance: 200, 
         },
         move: {
           enable: true, 
-          speed: { min: 1, max: 3 }, 
+          speed: { min: 1, max: 2 }, 
         },
         opacity: {
           value: { min: 0.3, max: 0.7 }, 
         },
         size: {
-          value: { min: 1, max: 3 }, 
+          value: { min: 1, max: 2 }, 
         },
       },
     };
