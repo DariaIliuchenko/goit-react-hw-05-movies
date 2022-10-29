@@ -3,12 +3,14 @@ import { Suspense } from 'react';
 import { Loader } from './Loader';
 import { Navigation } from './Navigation/Navigation';
 import Particles from './Particles';
+
 export const Layout = () => {
   return (
     <div>
       <Navigation />
 
       <main>
+        
         <Suspense
           fallback={
             <div>
@@ -18,7 +20,6 @@ export const Layout = () => {
         >
           <Outlet />
         </Suspense>
-        
       </main>
       <Particles id="tsparticles" />
     </div>

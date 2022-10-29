@@ -31,7 +31,6 @@ const HomePage = () => {
             ))}
           </List>
         </Container>
-      
     </Section>
   );
 };

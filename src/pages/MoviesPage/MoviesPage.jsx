@@ -52,6 +52,7 @@ const MoviesPage = () => {
             ))}
         </List>
       </Container>
+      
     </Section>
   );
 };
