@@ -18,7 +18,7 @@ const ParticlesComponent = (props) => {
       interactivity: {
         events: {
           onClick: {
-            enable: true, 
+            enable: false, 
             mode: "push", 
           },
           onHover: {
@@ -40,7 +40,7 @@ const ParticlesComponent = (props) => {
           value: 50,
         },
         links: {
-          enable: false, 
+          enable: true, 
           distance: 200, 
         },
         move: {

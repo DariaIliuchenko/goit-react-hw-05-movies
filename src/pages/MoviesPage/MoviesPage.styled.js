@@ -34,7 +34,7 @@ export const Form = styled.form`
   position: relative;
   justify-content: center;
   display: flex;
-  
+  margin-bottom: 30px; 
   
   
   
@@ -43,11 +43,11 @@ export const Form = styled.form`
 export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 18px;
   list-style: none;
-  padding-left:0;
-  justify-content: center;
-  margin-top: 80px;
+  padding-left:0; 
+  
+  justify-content: center;  
   background: rgba(32,51,54,1);
   
 `;
@@ -63,7 +63,7 @@ export const ItemLink = styled(Link)`
 
 export const Item = styled.li`
   display: flex;
-  width: 200px;
+  width: 300px;
   text-align: center;
   border: 1px solid #000;
   border-radius: 0px 0px 4px 4px;

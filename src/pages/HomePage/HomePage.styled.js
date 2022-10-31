@@ -5,17 +5,10 @@ export const List = styled.ul`
   flex-wrap: wrap;
   gap: 18px;
   list-style: none;
-  padding-left:0;
-  /* padding-top: 20px; */
-  justify-content: center;
-  /* background: rgb(255, 245, 246); */
-  /* background: linear-gradient(
-    180deg,
-    rgba(255, 245, 246, 1) 0%,
-    rgba(32, 51, 54, 1) 19%
-  ); */
+  padding-left:0;  
+  justify-content: center;  
   background: rgba(32,51,54,1);
-/* background: radial-gradient(circle, rgba(255,245,246,1) 23%, rgba(32,51,54,1) 82%); */
+
 `;
 
 export const Title = styled.h3`

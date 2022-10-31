@@ -44,7 +44,7 @@ const MoviesPage = () => {
               <Item key={id}>
                 <ItemLink to={`/movies/${id}`} state={{ from: location }}>
                   {poster_path && (
-                      <img src={IMAGE_URL + 'w200' + poster_path} alt={title} />
+                      <img src={IMAGE_URL + 'w300' + poster_path} alt={title} />
                     )}
                     <Title>{title}</Title>
                 </ItemLink>
